@@ -32,7 +32,7 @@
       animation: spin 1s linear infinite;
     }
     @keyframes spin {
-      0%   { transform: rotate(0deg); }
+      0% { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
     }
     .stars {
@@ -45,7 +45,7 @@
     }
     @keyframes moveStars {
       from { background-position: 0 0; }
-      to   { background-position: 10000px 10000px; }
+      to { background-position: 10000px 10000px; }
     }
     header {
       text-align: center;
@@ -54,7 +54,7 @@
     }
     @keyframes glow {
       from { text-shadow: 0 0 10px #00f6ff; }
-      to   { text-shadow: 0 0 30px #00ffee; }
+      to { text-shadow: 0 0 30px #00ffee; }
     }
     nav {
       display: flex;
@@ -113,8 +113,6 @@
     <div class="loader"></div>
   </div>
 
-  <audio id="intro-audio" src="sound.mp3" preload="auto"></audio>
-
   <div class="stars"></div>
 
   <header>
@@ -136,12 +134,12 @@
 
   <section id="playlist-doc911">
     <h2>Playlist: DOC911</h2>
-    <iframe src="https://www.youtube.com/embed/videoseries?list=YOUR_DOC911_PLAYLIST_ID" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/videoseries?list=PLrYD4SJlktuIt5Y-Ipwwr9wMoyBSAo_Q_" allowfullscreen></iframe>
   </section>
 
   <section id="playlist-new">
     <h2>Playlist: New Shit</h2>
-    <iframe src="https://www.youtube.com/embed/videoseries?list=YOUR_NEW_SHIT_PLAYLIST_ID" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/videoseries?list=PLrYD4SJlktuIrg7mSMkOqc2gc0Kixiayz" allowfullscreen></iframe>
   </section>
 
   <section id="nfts">
@@ -160,7 +158,6 @@
   <script>
     function startPage() {
       document.getElementById("loader").style.display = "none";
-      document.getElementById("intro-audio").play();
     }
   </script>
 </body>
