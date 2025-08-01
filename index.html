@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DOC911 Zone | Futuristic Universal Rap</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background: #000;
+      color: #00ffee;
+      margin: 0;
+      overflow-x: hidden;
+      position: relative;
+    }
+    .loader-wrapper {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+    .loader {
+      border: 6px solid #00ffee;
+      border-top: 6px solid #000;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+      0%   { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    .stars {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: url('stars.png') repeat top center;
+      animation: moveStars 200s linear infinite;
+      z-index: -1;
+    }
+    @keyframes moveStars {
+      from { background-position: 0 0; }
+      to   { background-position: 10000px 10000px; }
+    }
+    header {
+      text-align: center;
+      padding: 50px 20px;
+      animation: glow 2s infinite alternate;
+    }
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #00f6ff; }
+      to   { text-shadow: 0 0 30px #00ffee; }
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: rgba(0,255,255,0.1);
+      border-top: 2px solid #00ffee;
+      border-bottom: 2px solid #00ffee;
+    }
+    nav a {
+      padding: 16px 24px;
+      color: #00ffee;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      background-color: #00ffee;
+      color: #000;
+    }
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+    iframe {
+      width: 80%;
+      max-width: 720px;
+      height: 400px;
+      border: 3px solid #00ffee;
+      box-shadow: 0 0 20px #00ffee;
+      margin: 20px 0;
+    }
+    .nft-gallery {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+    .nft-gallery img {
+      width: 220px;
+      height: 220px;
+      border: 3px solid #00ffee;
+      border-radius: 12px;
+      box-shadow: 0 0 20px #00ffee;
+    }
+    footer {
+      text-align: center;
+      padding: 30px;
+      background-color: rgba(0,255,255,0.05);
+      font-size: 0.9em;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body onload="startPage()">
+
+  <div class="loader-wrapper" id="loader">
+    <div class="loader"></div>
+  </div>
+
+  <audio id="intro-audio" src="sound.mp3" preload="auto"></audio>
+
+  <div class="stars"></div>
+
+  <header>
+    <h1>🚨 DOC911 ZONE 🚨</h1>
+    <p>Transmitting Universal Frequencies Since 7022</p>
+  </header>
+
+  <nav>
+    <a href="#playlist-main">📺 Playlist</a>
+    <a href="#playlist-doc911">🚀 DOC911</a>
+    <a href="#playlist-new">🔥 New Shit</a>
+    <a href="#nfts">🖼️ NFTs</a>
+  </nav>
+
+  <section id="playlist-main">
+    <h2>Full Playlist</h2>
+    <iframe src="https://www.youtube.com/embed/videoseries?list=PLrYD4SJlktuJXR1-2Ks1RhtWbWtmhEo-D" allowfullscreen></iframe>
+  </section>
+
+  <section id="playlist-doc911">
+    <h2>Playlist: DOC911</h2>
+    <iframe src="https://www.youtube.com/embed/videoseries?list=YOUR_DOC911_PLAYLIST_ID" allowfullscreen></iframe>
+  </section>
+
+  <section id="playlist-new">
+    <h2>Playlist: New Shit</h2>
+    <iframe src="https://www.youtube.com/embed/videoseries?list=YOUR_NEW_SHIT_PLAYLIST_ID" allowfullscreen></iframe>
+  </section>
+
+  <section id="nfts">
+    <h2>NFT Visuals</h2>
+    <div class="nft-gallery">
+      <img src="https://via.placeholder.com/220x220?text=NFT+001" alt="NFT 001">
+      <img src="https://via.placeholder.com/220x220?text=NFT+002" alt="NFT 002">
+      <img src="https://via.placeholder.com/220x220?text=NFT+003" alt="NFT 003">
+    </div>
+  </section>
+
+  <footer>
+    &copy; 7025 DOC911 - Cosmic Rights Reserved
+  </footer>
+
+  <script>
+    function startPage() {
+      document.getElementById("loader").style.display = "none";
+      document.getElementById("intro-audio").play();
+    }
+  </script>
+</body>
+</html>
